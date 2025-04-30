@@ -3,13 +3,9 @@ import random
 import os
 from dotenv import load_dotenv
 import logging
-from modules.utils import write_command, press_key, get_balance, update_balance, load_player_stats, get_display_username, load_balances
+from modules.utils import write_command, press_key, get_balance, update_balance, load_player_stats, get_display_username, BASE_PATH, load_balances
 
-# Setup logging
-logging.basicConfig(filename='fish.log', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
-
-# Load environment variables
-load_dotenv()
+load_dotenv(os.path.join(BASE_PATH, '.env'))
 
 def gamble(username, amount_str):
     username_lower = username.lower()
@@ -106,3 +102,16 @@ def give_money(username, args):
         write_command(f"say [GIVEMONEY] > {display_username}: Error processing transfer. Please try again.")
         press_key()
         logging.error(f"Error in give_money for {username}: {e}")
+
+def commands(username):
+    """Display a list of available commands and their descriptions."""
+    username_lower = username.lower()
+    display_username = get_display_username(username)
+    logging.debug(f"Commands requested by {username}")
+    command_list = [
+        "!gamble",
+        "!givemoney"
+    ]
+    write_command(f"say [COMMANDS] > Available economy commands: {', '.join(command_list)}")
+    press_key()
+    logging.debug(f"Displayed commands for {username}")

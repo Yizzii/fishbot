@@ -2,40 +2,40 @@ import time
 import pyautogui
 import os
 import json
+import sys
 from dotenv import load_dotenv
 import logging
 
-# Setup logging
-logging.basicConfig(filename='fish.log', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
+# Determine base path for files (bundled or local)
+def get_base_path():
+    if getattr(sys, 'frozen', False):
+        return os.path.dirname(sys.executable)  # .exe directory
+    # Use main.py's directory for non-bundled runs
+    return os.path.dirname(os.path.abspath(sys.modules['__main__'].__file__))
 
-load_dotenv()
+BASE_PATH = get_base_path()
 
-EXEC_FILE = os.getenv('EXEC_FILE')
-if not EXEC_FILE:
-    logging.error("EXEC_FILE not set in .env")
-    raise ValueError("EXEC_FILE environment variable is missing")
+# Configure logging
+def setup_logging():
+    logging.basicConfig(
+        filename=os.path.join(BASE_PATH, 'fish.log'),
+        level=logging.DEBUG,
+        format='%(asctime)s - %(levelname)s - %(message)s'
+    )
+    logging.debug("Logging initialized")
 
-PLAYER_STATS_FILE = "player_stats.json"
+# Load environment variables
+load_dotenv(os.path.join(BASE_PATH, '.env'))
 
-def commands(username):
-    """Display a list of available commands and their descriptions."""
-    logging.debug(f"Commands requested by {username}")
+# Default paths if not set in .env
+EXEC_FILE = os.getenv('EXEC_FILE', os.path.join(BASE_PATH, 'exec.txt'))
+CONSOLE_FILE = os.getenv('CONSOLE_FILE', os.path.join(BASE_PATH, 'console.log'))
+if not EXEC_FILE or not CONSOLE_FILE:
+    logging.warning("EXEC_FILE or CONSOLE_FILE not set in .env, using defaults")
 
-    
-    command_list = [
-        "!fish",
-        "!gamble",
-        "!balance",
-        "!stats",
-        "!givemoney",
-        "!shop",
-        "!shop bait",
-        "!shop buy <item_name>"
-    ]
-
-    write_command(f"say [COMMANDS] > {', '.join(command_list)}")
-    press_key()
-    logging.debug(f"Displayed commands for {username}")
+PLAYER_STATS_FILE = os.path.join(BASE_PATH, 'player_stats.json')
+GLOBAL_STATS_FILE = os.path.join(BASE_PATH, 'global_stats.json')
+FISHBASE_FILE = os.path.join(BASE_PATH, 'fishbase.json')
 
 def load_balances():
     """Load balances from player_stats.json, return a dict with lowercase keys."""
@@ -148,6 +148,7 @@ def get_display_username(username):
     return username
 
 def write_command(command):
+    logging.debug(f"Writing command to {EXEC_FILE}: {command}")
     with open(EXEC_FILE, 'w', encoding='utf-8') as f:
         f.write(command)
 
@@ -157,3 +158,25 @@ def press_key():
 
 def press_key_no_delay():
     pyautogui.press('f1')
+
+def commands(username):
+    """Display a list of available commands and their descriptions."""
+    username_lower = username.lower()
+    display_username = get_display_username(username)
+    logging.debug(f"Commands requested by {username}")
+
+    
+    command_list = [
+        "!fish",
+        "!gamble",
+        "!balance",
+        "!stats",
+        "!givemoney",
+        "!shop",
+        "!shop bait",
+        "!shop buy <item_name>"
+    ]
+
+    write_command(f"say [COMMANDS] > {', '.join(command_list)}")
+    press_key()
+    logging.debug(f"Displayed commands for {username}")

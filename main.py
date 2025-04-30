@@ -1,18 +1,19 @@
 import time
 import re
 import os
+import sys
 from dotenv import load_dotenv
 from modules.fish import cast_line, show_player_stats, show_global_stats_command, shop
 from modules.economy import gamble, give_money
-from modules.utils import write_command, press_key, press_key_no_delay, get_balance, commands
+from modules.utils import write_command, press_key, press_key_no_delay, get_balance, setup_logging, BASE_PATH, commands
 import logging
 
 # Setup logging
-logging.basicConfig(filename='fish.log', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
+setup_logging()
 
-load_dotenv()
+load_dotenv(os.path.join(BASE_PATH, '.env'))
 
-CONSOLE_FILE = os.getenv('CONSOLE_FILE')
+CONSOLE_FILE = os.getenv('CONSOLE_FILE', os.path.join(BASE_PATH, 'console.log'))
 PRIVILEGED_USERNAME = os.getenv('PRIVILEGED_USERNAME')
 if not PRIVILEGED_USERNAME:
     logging.error("PRIVILEGED_USERNAME not set in .env. No user will have privileged access.")
@@ -36,7 +37,7 @@ def check_cooldown(username, command):
     """Check if the player is on cooldown. Return (is_allowed, wait_time)."""
     username_lower = username.lower()
     if PRIVILEGED_USERNAME and username_lower == PRIVILEGED_USERNAME:
-        logging.debug(f"No cooldown for {command} for {username} (privileged)")
+        logging.debug(f"No cooldown for {command} for {username}")
         return True, 0.0
 
     cooldown_duration = COOLDOWNS.get(command, 0.0)
@@ -94,14 +95,13 @@ def parse(line):
         username = ""
         command = ""
         args = ""
-    
+
     logging.debug(f"Parsed command: username={username}, command={command}, args={args}")
 
     if not command:
         logging.debug("Skipping empty command")
         return
 
-    # Check centralized cooldown
     is_allowed, wait_time = check_cooldown(username, command)
     if not is_allowed:
         return

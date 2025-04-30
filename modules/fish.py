@@ -1,22 +1,12 @@
 import json
 import random
 import time
-from datetime import datetime
-from modules.utils import write_command, press_key, get_balance, update_balance, load_player_stats, save_player_stats, get_display_username
-from enum import Enum
 import os
-from dotenv import load_dotenv
+from datetime import datetime
+from modules.utils import write_command, press_key, get_balance, update_balance, load_player_stats, save_player_stats, get_display_username, BASE_PATH, FISHBASE_FILE, GLOBAL_STATS_FILE
+from enum import Enum
 import logging
 
-# Setup logging
-logging.basicConfig(filename='fish.log', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
-
-# Load environment variables
-load_dotenv()
-
-GLOBAL_STATS_FILE = "global_stats.json"
-
-# Fishing Rod Definitions
 FISHING_RODS = {
     "Old Rod": {"price": 0.0, "catch_rate": 0.25, "rarity_modifier": 1.0},
     "Average Rod": {"price": 1000.0, "catch_rate": 0.45, "rarity_modifier": 1.1},
@@ -24,7 +14,6 @@ FISHING_RODS = {
     "Super Rod": {"price": 50000.0, "catch_rate": 0.75, "rarity_modifier": 1.5}
 }
 
-# Fishing Bait Definitions
 FISHING_BAITS = {
     "Worm": {"price": 0.0, "catch_rate_boost": 0.0, "rarity_modifier": 1.0},
     "Minnow": {"price": 500.0, "catch_rate_boost": 0.10, "rarity_modifier": 1.1},
@@ -69,7 +58,6 @@ class FishWeight:
         self.Max = 0.0
 
 def load_global_stats():
-    """Load global stats from global_stats.json, return a dict."""
     default_stats = {
         "total_casts": 0,
         "total_fish_caught": 0,
@@ -101,7 +89,6 @@ def load_global_stats():
     return default_stats
 
 def save_global_stats(stats):
-    """Save global stats to global_stats.json."""
     try:
         with open(GLOBAL_STATS_FILE, "w") as file:
             json.dump(stats, file, indent=2)
@@ -169,9 +156,7 @@ def shop(username, args=None):
     username_lower = username.lower()
     display_username = get_display_username(username)
     args_lower = args.lower() if args else ""
-
     if args_lower == "bait":
-        # Page 2: Baits
         bait_list = [
             f"{bait}: ${bait_stats['price']:,.2f} (Catch Rate Boost: +{bait_stats['catch_rate_boost']*100:.2f}%, Rarity Boost: {bait_stats['rarity_modifier']:.2f}x)"
             for bait, bait_stats in FISHING_BAITS.items() if bait != "Worm"
@@ -181,9 +166,7 @@ def shop(username, args=None):
         )
         press_key()
         return
-
     if not args:
-        # Page 1: Rods
         rod_list = [
             f"{rod}: ${rod_stats['price']:,.2f} (Catch Rate: {rod_stats['catch_rate']*100:.2f}%, Rarity Boost: {rod_stats['rarity_modifier']:.2f}x)"
             for rod, rod_stats in FISHING_RODS.items() if rod != "Old Rod"
@@ -193,13 +176,10 @@ def shop(username, args=None):
         )
         press_key()
         return
-
     if args_lower.startswith("buy "):
         item_name = " ".join(args.split()[1:]).title()
         player_stats = load_player_stats()
         current_balance = get_balance(username)
-
-        # Check if item is a rod
         if item_name in FISHING_RODS:
             rod_stats = FISHING_RODS[item_name]
             price = rod_stats["price"]
@@ -217,8 +197,6 @@ def shop(username, args=None):
             write_command(f"say [SHOP] > {display_username}: You bought {item_name} for ${price:,.2f}! It’s now equipped. New balance: ${round(get_balance(username), 2):,.2f}")
             press_key()
             return
-
-        # Check if item is a bait
         if item_name in FISHING_BAITS:
             bait_stats = FISHING_BAITS[item_name]
             price = bait_stats["price"]
@@ -229,19 +207,15 @@ def shop(username, args=None):
             if current_balance < price:
                 write_command(f"say [SHOP] > {display_username}: Not enough funds! Need ${price:,.2f}, you have ${current_balance:,.2f}")
                 press_key()
-                return
             update_balance(username, -price)
             player_stats[username_lower]["equipped_bait"] = item_name
             save_player_stats(player_stats)
             write_command(f"say [SHOP] > {display_username}: You bought {item_name} bait for ${price:,.2f}! It’s now equipped. New balance: ${round(get_balance(username), 2):,.2f}")
             press_key()
             return
-
-        # Invalid item name
         write_command(f"say [SHOP] > {display_username}: Invalid item name. See baits with !shop bait, See rods with !shop")
         press_key()
         return
-
     write_command(f"say [SHOP] > {display_username}: Invalid command. Use !shop, !shop bait, or !shop buy <item_name>")
     press_key()
 
@@ -309,7 +283,7 @@ def show_player_stats(username):
 
 def load_fish_db():
     try:
-        with open("fishbase.json", "r") as file:
+        with open(FISHBASE_FILE, "r") as file:
             json_data = file.read()
             fish_data = json.loads(json_data)
         return fish_data
