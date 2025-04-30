@@ -1,44 +1,57 @@
-# galls (a CS2 selfbot)
+# fork of [galls (a CS2 selfbot)](https://github.com/Pandaptable/galls)
 
 Galls is a somewhat simple python script to generate responses to commands by sending a keystroke which executes a config file ingame.
 
 ## Features
-- `!disconnect`
-  - Disconnects you from the game.
-- `!i <inspect link>`
-  - Will open the inspect link inside of your client.
-- `!switchhands`
-  - Will switch your viewmodel between right and left
-- `!play <sound>`
-  - Will play the given sound on your client (look [here](https://github.com/redBDGR/CS2-Sound-List) for a sound list)
-  - Note: I recommend setting the console command `snd_toolvolume` to a lower value (I use 0.2)
-- `!fish`
-  - Fishing minigame!
-### Extra setup required to work.
-- `!flash`
-  - Will simulate a flashbang on your client (thanks psp <3)
-  - Required setup: https://gist.github.com/Pandaptable/e2212377704d198c69aab6e1b5d22e86
+  - fish.
+  - more fish.
+  - even more fish.
  
-### Demo Video
+### Demo Video ()
 
 [Demo](https://github.com/Pandaptable/galls/assets/80334807/7a646185-6139-43b3-8f46-de1cdbc64c6c)
 
 ## Requirements
 
-- [Python 3.11](https://www.python.org/downloads/release/python-3119/) (only version I tested)
-- [Poetry](https://python-poetry.org/)
+- [Python](https://www.python.org/downloads/) only needed if doing manual install
 
-## Installing
+- add `-condebug` to your cs2 launch options (this makes cs log to D:\SteamLibrary\steamapps\common\Counter-Strike Global Offensive\game\csgo\console.log for example.)
 
-1. Install [Python 3.11](https://www.python.org/downloads/release/python-3119/)
-2. Install [Poetry](https://python-poetry.org/)
-3. Clone the repo into a folder on your computer.
-4. Run `cd galls` inside of a terminal window.
-5. Run `poetry install` inside of a terminal window to install dependencies.
-6. Make a copy of `.env.example` and name it `.env`, edit it to contain the correct environment variables needed for the script to work.
-7. Run `python main.py` inside of the project directory.
+
+## Simple Install
+ - grab latest [release](https://github.com/Yizzii/fishbot/releases/latest)
+ - extract zip to folder
+ - edit the .env file with your username and config paths
+ - open CS2GoFish.exe
+
+## Manual Install
+  - install [Python](https://www.python.org/downloads/)
+  - Clone the repo into a folder on your computer.
+  - cd into repo folder. `cd <path>` in command line
+  - run `pip install -r requirements.txt`
+  - Run `python main.py` inside of the project directory.
+
+## Commands
+    "!fish - Cast your line to catch a fish.",
+    "!gamble <amount|all|num%> - Gamble money for a 50% chance to double it.",
+    "!balance - Check your current balance.",
+    "!stats - View your fishing stats (casts, fish caught, rarities).",
+    "!globalstats - View global fishing stats (privileged users only).",
+    "!givemoney <player> <amount> - Transfer money to another player.",
+    "!shop - View rods for purchase.",
+    "!shop bait - View baits for purchase.",
+    "!shop buy <item_name> - Buy a rod or bait (e.g., Average Rod, Bloodworm).",
+    "!commands - Show this list of commands."
+
+
+## Confused?
+  - Q: i can't find yizzibotmessage.cfg where is it?
+  -  A: it gets created when you do a command for the first time, you dont need the file when setting its path in .env
+  -
+  - Q: i can't find console.log where is it?
+  - A: you need to add `-condebug` to your cs2 launch options.
 
 ## Authors
-
-  - [Pandaptable](https://github.com/Pandaptable)
+  - [Yizzi](https://github.com/Yizzii) too many changes.
+  - [Pandaptable](https://github.com/Pandaptable) made original galls.
   - [DeaFPS](https://twitter.com/deafps_) for letting me yoink her code and convert it to python... also making the fish database because [fishbase](http://www.fishbase.us/) is way too big.. ly loser <3
