@@ -27,7 +27,7 @@ Galls is a somewhat simple python script to generate responses to commands by se
 
 ## Manual Install
   - install [Python](https://www.python.org/downloads/)
-  - Clone the repo into a folder on your computer.
+  - git lone the repo or manually install source into a folder on your computer.
   - cd into repo folder. `cd <path>` in command line
   - run `pip install -r requirements.txt`
   - Run `python main.py` inside of the project directory.
