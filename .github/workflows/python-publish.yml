@@ -28,16 +28,19 @@ jobs:
       - name: Build executable
         run: |
           pyinstaller CS2GoFish.spec
+      - name: Create zip file
+        run: |
+          python -m zipfile -c cs2gofish.zip dist/CS2GoFish.exe .env fishbase.json player_stats.json global_stats.json exec.txt console.log fish.log
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: CS2GoFish-windows
-          path: dist/CS2GoFish.exe
+          path: cs2gofish.zip
           if-no-files-found: error
       - name: Create Release
         uses: softprops/action-gh-release@v2
         with:
-          files: dist/CS2GoFish.exe
+          files: cs2gofish.zip
           draft: false
           prerelease: false
           tag_name: ${{ github.ref_name }}
