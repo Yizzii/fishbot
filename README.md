@@ -1,6 +1,6 @@
 # fork of [galls (a CS2 selfbot)](https://github.com/Pandaptable/galls)
 
-Galls is a somewhat simple python script to generate responses to commands by sending a keystroke which executes a config file ingame.
+Galls is a somewhat simple python script to generate responses to commands by sending a keystroke (F1) which executes a config file ingame.
 
 ## Features
   - fish.
@@ -23,6 +23,7 @@ Galls is a somewhat simple python script to generate responses to commands by se
  - extract zip to folder
  - edit the .env file with your username and config paths
  - open CS2GoFish.exe
+ - Run `bind f1 yizzibotmessage` in cs2 console
 
 ## Manual Install
   - install [Python](https://www.python.org/downloads/)
@@ -30,6 +31,7 @@ Galls is a somewhat simple python script to generate responses to commands by se
   - cd into repo folder. `cd <path>` in command line
   - run `pip install -r requirements.txt`
   - Run `python main.py` inside of the project directory.
+  - Run `bind f1 yizzibotmessage` in cs2 console
 
 ## Commands
     "!fish - Cast your line to catch a fish.",
