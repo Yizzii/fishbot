@@ -1,9 +1,6 @@
 name: Build and Release CS2 Go Fish Executable
 
-on:
-  push:
-    tags:
-      - 'v*.*.*'  # Triggers on tags like v1.0.0
+on: workflow_dispatch
 
 jobs:
   build:
