@@ -7,7 +7,7 @@ Galls is a somewhat simple python script to generate responses to commands by se
   - more fish.
   - even more fish.
  
-### Demo Video ()
+### Demo Video (old)
 
 [Demo](https://github.com/Pandaptable/galls/assets/80334807/7a646185-6139-43b3-8f46-de1cdbc64c6c)
 
