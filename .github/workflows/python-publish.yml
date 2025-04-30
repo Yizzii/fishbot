@@ -18,6 +18,14 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           pip install pyinstaller
+
+      - name: Verify CS2GoFish.spec exists
+        run: |
+          if (-Not (Test-Path "CS2GoFish.spec")) {
+            Write-Error "CS2GoFish.spec not found in repository root. Please ensure the file is committed."
+            exit 1
+          }
+        shell: powershell
       - name: Install UPX
         run: |
           choco install upx
