@@ -1,0 +1,842 @@
+{
+  "Categories": [
+    {
+      "Rarity": "Common",
+      "FishList": [
+        {
+          "Name": "Atlantic Cod",
+          "Price": 5.17,
+          "Weight": {
+            "Min": 2.5,
+            "Max": 211.0
+          }
+        },
+        {
+          "Name": "Rainbow Trout",
+          "Price": 4.07,
+          "Weight": {
+            "Min": 0.5,
+            "Max": 48.0
+          }
+        },
+        {
+          "Name": "Bluegill",
+          "Price": 4.34,
+          "Weight": {
+            "Min": 0.1,
+            "Max": 4.75
+          }
+        },
+        {
+          "Name": "Yellow Perch",
+          "Price": 19.84,
+          "Weight": {
+            "Min": 0.3,
+            "Max": 4.19
+          }
+        },
+        {
+          "Name": "Sardine",
+          "Price": 2.13,
+          "Weight": {
+            "Min": 0.05,
+            "Max": 0.5
+          }
+        },
+        {
+          "Name": "Tilapia",
+          "Price": 5.26,
+          "Weight": {
+            "Min": 0.2,
+            "Max": 24.5
+          }
+        },
+        {
+          "Name": "Catfish",
+          "Price": 8.64,
+          "Weight": {
+            "Min": 1.0,
+            "Max": 58.0
+          }
+        },
+        {
+          "Name": "Crappie",
+          "Price": 3.88,
+          "Weight": {
+            "Min": 0.3,
+            "Max": 5.19
+          }
+        },
+        {
+          "Name": "Carp",
+          "Price": 1.13,
+          "Weight": {
+            "Min": 1.0,
+            "Max": 94.13
+          }
+        },
+        {
+          "Name": "Flounder",
+          "Price": 6.1,
+          "Weight": {
+            "Min": 0.5,
+            "Max": 20.56
+          }
+        },
+        {
+          "Name": "Anchovy",
+          "Price": 0.51,
+          "Weight": {
+            "Min": 0.05,
+            "Max": 0.25
+          }
+        },
+        {
+          "Name": "Herring",
+          "Price": 5.48,
+          "Weight": {
+            "Min": 0.1,
+            "Max": 1.1
+          }
+        },
+        {
+          "Name": "Mullet",
+          "Price": 3.58,
+          "Weight": {
+            "Min": 0.2,
+            "Max": 17.13
+          }
+        },
+        {
+          "Name": "Pilchard",
+          "Price": 2.13,
+          "Weight": {
+            "Min": 0.05,
+            "Max": 0.5
+          }
+        },
+        {
+          "Name": "Whitebait",
+          "Price": 2.95,
+          "Weight": {
+            "Min": 0.03,
+            "Max": 0.2
+          }
+        },
+        {
+          "Name": "Surfperch",
+          "Price": 4.5,
+          "Weight": {
+            "Min": 0.2,
+            "Max": 4.13
+          }
+        },
+        {
+          "Name": "Goby",
+          "Price": 3.2,
+          "Weight": {
+            "Min": 0.1,
+            "Max": 0.66
+          }
+        },
+        {
+          "Name": "Garfish",
+          "Price": 4.73,
+          "Weight": {
+            "Min": 0.3,
+            "Max": 3.13
+          }
+        },
+        {
+          "Name": "Sand Lance",
+          "Price": 4.2,
+          "Weight": {
+            "Min": 0.05,
+            "Max": 0.4
+          }
+        },
+        {
+          "Name": "Mummichog",
+          "Price": 3,
+          "Weight": {
+            "Min": 0.05,
+            "Max": 0.22
+          }
+        }
+      ]
+    },
+    {
+      "Rarity": "Uncommon",
+      "FishList": [
+        {
+          "Name": "Red Snapper",
+          "Price": 12.4,
+          "Weight": {
+            "Min": 1.0,
+            "Max": 50.25
+          }
+        },
+        {
+          "Name": "Striped Bass",
+          "Price": 10.9,
+          "Weight": {
+            "Min": 2.0,
+            "Max": 81.88
+          }
+        },
+        {
+          "Name": "Permit",
+          "Price": 8.2,
+          "Weight": {
+            "Min": 3.0,
+            "Max": 60.06
+          }
+        },
+        {
+          "Name": "Barracuda",
+          "Price": 3.37,
+          "Weight": {
+            "Min": 4.0,
+            "Max": 87.0
+          }
+        },
+        {
+          "Name": "Bream",
+          "Price": 7.3,
+          "Weight": {
+            "Min": 0.5,
+            "Max": 3.0
+          }
+        },
+        {
+          "Name": "Pike",
+          "Price": 9.6,
+          "Weight": {
+            "Min": 2.0,
+            "Max": 55.06
+          }
+        },
+        {
+          "Name": "Walleye",
+          "Price": 8.8,
+          "Weight": {
+            "Min": 1.0,
+            "Max": 25.0
+          }
+        },
+        {
+          "Name": "Trout",
+          "Price": 4.07,
+          "Weight": {
+            "Min": 0.3,
+            "Max": 48.0
+          }
+        },
+        {
+          "Name": "Halibut",
+          "Price": 32.91,
+          "Weight": {
+            "Min": 2.0,
+            "Max": 418.0
+          }
+        },
+        {
+          "Name": "Rainbow Smelt",
+          "Price": 4.07,
+          "Weight": {
+            "Min": 0.1,
+            "Max": 0.75
+          }
+        },
+        {
+          "Name": "Bluefish",
+          "Price": 7.8,
+          "Weight": {
+            "Min": 0.5,
+            "Max": 31.75
+          }
+        },
+        {
+          "Name": "Sheepshead",
+          "Price": 8.3,
+          "Weight": {
+            "Min": 0.5,
+            "Max": 21.25
+          }
+        },
+        {
+          "Name": "Tilefish",
+          "Price": 7.68,
+          "Weight": {
+            "Min": 1.0,
+            "Max": 65.19
+          }
+        },
+        {
+          "Name": "Yellowtail",
+          "Price": 6.79,
+          "Weight": {
+            "Min": 0.3,
+            "Max": 80.13
+          }
+        },
+        {
+          "Name": "Bonefish",
+          "Price": 3.55,
+          "Weight": {
+            "Min": 0.3,
+            "Max": 19.0
+          }
+        },
+        {
+          "Name": "Black Drum",
+          "Price": 7.9,
+          "Weight": {
+            "Min": 1.0,
+            "Max": 146.0
+          }
+        },
+        {
+          "Name": "Cobia",
+          "Price": 5.36,
+          "Weight": {
+            "Min": 2.0,
+            "Max": 135.56
+          }
+        },
+        {
+          "Name": "Red Grouper",
+          "Price": 8.5,
+          "Weight": {
+            "Min": 1.0,
+            "Max": 42.25
+          }
+        },
+        {
+          "Name": "Fluke",
+          "Price": 6.7,
+          "Weight": {
+            "Min": 0.5,
+            "Max": 22.44
+          }
+        }
+      ]
+    },
+    {
+      "Rarity": "Rare",
+      "FishList": [
+        {
+          "Name": "Yellowfin Tuna",
+          "Price": 2.3,
+          "Weight": {
+            "Min": 30.0,
+            "Max": 427.0
+          }
+        },
+        {
+          "Name": "Giant Trevally",
+          "Price": 4.68,
+          "Weight": {
+            "Min": 20.0,
+            "Max": 160.44
+          }
+        },
+        {
+          "Name": "Mackerel",
+          "Price": 2.64,
+          "Weight": {
+            "Min": 10.0,
+            "Max": 93.0
+          }
+        },
+        {
+          "Name": "Salmon",
+          "Price": 4.59,
+          "Weight": {
+            "Min": 2.0,
+            "Max": 97.25
+          }
+        },
+        {
+          "Name": "Redfish",
+          "Price": 3.08,
+          "Weight": {
+            "Min": 1.0,
+            "Max": 94.13
+          }
+        },
+        {
+          "Name": "Haddock",
+          "Price": 3.2,
+          "Weight": {
+            "Min": 1.0,
+            "Max": 16.5
+          }
+        },
+        {
+          "Name": "Monkfish",
+          "Price": 3.4,
+          "Weight": {
+            "Min": 3.0,
+            "Max": 99.25
+          }
+        },
+        {
+          "Name": "Black Sea Bass",
+          "Price": 3.5,
+          "Weight": {
+            "Min": 1.0,
+            "Max": 10.25
+          }
+        },
+        {
+          "Name": "Red Drum",
+          "Price": 4.63,
+          "Weight": {
+            "Min": 1.0,
+            "Max": 94.13
+          }
+        },
+        {
+          "Name": "Weakfish",
+          "Price": 1.06,
+          "Weight": {
+            "Min": 0.5,
+            "Max": 19.13
+          }
+        },
+        {
+          "Name": "Dolphinfish",
+          "Price": 3.4,
+          "Weight": {
+            "Min": 3.0,
+            "Max": 88.0
+          }
+        },
+        {
+          "Name": "Milkfish",
+          "Price": 7.2,
+          "Weight": {
+            "Min": 1.0,
+            "Max": 41.75
+          }
+        },
+        {
+          "Name": "Hogfish",
+          "Price": 13.3,
+          "Weight": {
+            "Min": 0.5,
+            "Max": 21.13
+          }
+        }
+      ]
+    },
+    {
+      "Rarity": "Very Rare",
+      "FishList": [
+        {
+          "Name": "Atlantic Bluefin Tuna",
+          "Price": 34.14,
+          "Weight": {
+            "Min": 150.0,
+            "Max": 1496.0
+          }
+        },
+        {
+          "Name": "Goliath Grouper",
+          "Price": 2.9,
+          "Weight": {
+            "Min": 80.0,
+            "Max": 680.0
+          }
+        },
+        {
+          "Name": "Tarpon",
+          "Price": 4.4,
+          "Weight": {
+            "Min": 50.0,
+            "Max": 287.0
+          }
+        },
+        {
+          "Name": "Albacore Tuna",
+          "Price": 1.94,
+          "Weight": {
+            "Min": 40.0,
+            "Max": 88.13
+          }
+        },
+        {
+          "Name": "Sturgeon",
+          "Price": 9.16,
+          "Weight": {
+            "Min": 20.0,
+            "Max": 468.0
+          }
+        },
+        {
+          "Name": "Sailfish",
+          "Price": 5.54,
+          "Weight": {
+            "Min": 10.0,
+            "Max": 141.06
+          }
+        },
+        {
+          "Name": "Dorado",
+          "Price": 25.94,
+          "Weight": {
+            "Min": 5.0,
+            "Max": 88.0
+          }
+        },
+        {
+          "Name": "Wahoo",
+          "Price": 6.62,
+          "Weight": {
+            "Min": 4.0,
+            "Max": 184.0
+          }
+        },
+        {
+          "Name": "Tigerfish",
+          "Price": 3,
+          "Weight": {
+            "Min": 5.0,
+            "Max": 70.0
+          }
+        },
+        {
+          "Name": "Wels Catfish",
+          "Price": 4.84,
+          "Weight": {
+            "Min": 10.0,
+            "Max": 317.0
+          }
+        },
+        {
+          "Name": "Tambaqui",
+          "Price": 1.96,
+          "Weight": {
+            "Min": 10.0,
+            "Max": 97.0
+          }
+        },
+        {
+          "Name": "Tuna Mackerel",
+          "Price": 19.0,
+          "Weight": {
+            "Min": 0.5,
+            "Max": 45.25
+          }
+        },
+        {
+          "Name": "Atlantic Bonito",
+          "Price": 5.57,
+          "Weight": {
+            "Min": 1.0,
+            "Max": 18.25
+          }
+        },
+        {
+          "Name": "Hake",
+          "Price": 9.6,
+          "Weight": {
+            "Min": 0.5,
+            "Max": 25.38
+          }
+        },
+        {
+          "Name": "Gurnard",
+          "Price": 6.15,
+          "Weight": {
+            "Min": 0.3,
+            "Max": 4.5
+          }
+        }
+      ]
+    },
+    {
+      "Rarity": "Epic",
+      "FishList": [
+        {
+          "Name": "King Salmon",
+          "Price": 350,
+          "Weight": {
+            "Min": 20.0,
+            "Max": 97.25
+          }
+        },
+        {
+          "Name": "Mako Shark",
+          "Price": 480.5,
+          "Weight": {
+            "Min": 100.0,
+            "Max": 1221.0
+          }
+        },
+        {
+          "Name": "Bluefin Trevally",
+          "Price": 310.8,
+          "Weight": {
+            "Min": 15.0,
+            "Max": 160.44
+          }
+        },
+        {
+          "Name": "Yellowtail Amberjack",
+          "Price": 390.2,
+          "Weight": {
+            "Min": 30.0,
+            "Max": 157.0
+          }
+        },
+        {
+          "Name": "Giant Catfish",
+          "Price": 150,
+          "Weight": {
+            "Min": 50.0,
+            "Max": 646.0
+          }
+        },
+        {
+          "Name": "Blue Catfish",
+          "Price": 120.5,
+          "Weight": {
+            "Min": 30.0,
+            "Max": 143.0
+          }
+        },
+        {
+          "Name": "Giant Bass",
+          "Price": 200.8,
+          "Weight": {
+            "Min": 20.0,
+            "Max": 22.25
+          }
+        },
+        {
+          "Name": "Golden Trout",
+          "Price": 180.2,
+          "Weight": {
+            "Min": 5.0,
+            "Max": 11.0
+          }
+        },
+        {
+          "Name": "Giant Pike",
+          "Price": 250.4,
+          "Weight": {
+            "Min": 10.0,
+            "Max": 55.06
+          }
+        },
+        {
+          "Name": "Archerfish",
+          "Price": 570,
+          "Weight": {
+            "Min": 1,
+            "Max": 2.13
+          }
+        },
+        {
+          "Name": "Alligator Gar",
+          "Price": 120.5,
+          "Weight": {
+            "Min": 50.0,
+            "Max": 327.0
+          }
+        },
+        {
+          "Name": "Giant Snakehead",
+          "Price": 100.2,
+          "Weight": {
+            "Min": 10.0,
+            "Max": 44.0
+          }
+        },
+        {
+          "Name": "Mahseer",
+          "Price": 95.8,
+          "Weight": {
+            "Min": 5.0,
+            "Max": 120.0
+          }
+        },
+        {
+          "Name": "Mekong Giant Catfish",
+          "Price": 150.4,
+          "Weight": {
+            "Min": 50.0,
+            "Max": 646.0
+          }
+        },
+        {
+          "Name": "Mahi Mahi",
+          "Price": 180.5,
+          "Weight": {
+            "Min": 50.0,
+            "Max": 88.0
+          }
+        }
+      ]
+    },
+    {
+      "Rarity": "Legendary",
+      "FishList": [
+        {
+          "Name": "Great White Shark",
+          "Price": 14,
+          "Weight": {
+            "Min": 1000.0,
+            "Max": 2664.0
+          }
+        },
+        {
+          "Name": "Napoleon Wrasse",
+          "Price": 850.6,
+          "Weight": {
+            "Min": 20.0,
+            "Max": 150.0
+          }
+        },
+        {
+          "Name": "Megalodon",
+          "Price": 17,
+          "Weight": {
+            "Min": 1000.0,
+            "Max": 6000.0
+          }
+        },
+        {
+          "Name": "Leviathan",
+          "Price": 16,
+          "Weight": {
+            "Min": 2000.0,
+            "Max": 8000.0
+          }
+        },
+        {
+          "Name": "Kraken",
+          "Price": 14,
+          "Weight": {
+            "Min": 2000.0,
+            "Max": 8000.0
+          }
+        },
+        {
+          "Name": "Poseidon's Tridentfish",
+          "Price": 18,
+          "Weight": {
+            "Min": 2000.0,
+            "Max": 8000.0
+          }
+        },
+        {
+          "Name": "Rainbow Marlin",
+          "Price": 80,
+          "Weight": {
+            "Min": 400.0,
+            "Max": 602.13
+          }
+        },
+        {
+          "Name": "Diamond Swordfish",
+          "Price": 80,
+          "Weight": {
+            "Min": 600.0,
+            "Max": 1182.0
+          }
+        },
+        {
+          "Name": "Platinum Tuna",
+          "Price": 130,
+          "Weight": {
+            "Min": 400.0,
+            "Max": 999.0
+          }
+        },
+        {
+          "Name": "Titanic Grouper",
+          "Price": 146,
+          "Weight": {
+            "Min": 300.0,
+            "Max": 680.0
+          }
+        },
+        {
+          "Name": "Eternal Salmon",
+          "Price": 467,
+          "Weight": {
+            "Min": 97.0,
+            "Max": 150.25
+          }
+        },
+        {
+          "Name": "Golden Mahseer",
+          "Price": 580,
+          "Weight": {
+            "Min": 100.0,
+            "Max": 120.0
+          }
+        },
+        {
+          "Name": "White Sturgeon",
+          "Price": 350,
+          "Weight": {
+            "Min": 100.0,
+            "Max": 468.0
+          }
+        },
+        {
+          "Name": "Tiger Striped Marlin",
+          "Price": 320,
+          "Weight": {
+            "Min": 100.0,
+            "Max": 494.0
+          }
+        },
+        {
+          "Name": "Giant Pirarucu",
+          "Price": 350,
+          "Weight": {
+            "Min": 100.0,
+            "Max": 440.0
+          }
+        },
+        {
+          "Name": "Titanic Sawfish",
+          "Price": 150,
+          "Weight": {
+            "Min": 200.0,
+            "Max": 1250.0
+          }
+        },
+        {
+          "Name": "Blue Marlin",
+          "Price": 179,
+          "Weight": {
+            "Min": 300.0,
+            "Max": 1302.13
+          }
+        },
+        {
+          "Name": "Swordfish",
+          "Price": 189,
+          "Weight": {
+            "Min": 500.0,
+            "Max": 1182.0
+          }
+        },
+        {
+          "Name": "Giant Squid",
+          "Price": 94,
+          "Weight": {
+            "Min": 1000.0,
+            "Max": 2091.0
+          }
+        }
+      ]
+    }
+  ]
+}

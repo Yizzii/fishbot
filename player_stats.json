@@ -1,0 +1,834 @@
+{
+  "goobert": {
+    "total_casts": 772,
+    "total_fish_caught": 576,
+    "rarities": {
+      "Common": 228,
+      "Uncommon": 166,
+      "Rare": 104,
+      "Very Rare": 47,
+      "Epic": 16,
+      "Legendary": 15
+    },
+    "equipped_rod": "Super Rod",
+    "original_username": "Goobert",
+    "equipped_bait": "Crab",
+    "balance": 78598.04104572827
+  },
+  "crampeddust397": {
+    "total_casts": 429,
+    "total_fish_caught": 311,
+    "rarities": {
+      "Common": 115,
+      "Uncommon": 87,
+      "Rare": 61,
+      "Very Rare": 28,
+      "Epic": 14,
+      "Legendary": 6
+    },
+    "equipped_rod": "Super Rod",
+    "original_username": "CrampedDust397",
+    "equipped_bait": "Crab",
+    "balance": 3156593.179635104
+  },
+  "13 i 6 \u26a1 13 o 12 i 5": {
+    "total_casts": 24,
+    "total_fish_caught": 15,
+    "rarities": {
+      "Common": 6,
+      "Uncommon": 6,
+      "Rare": 1,
+      "Very Rare": 1,
+      "Epic": 0,
+      "Legendary": 1
+    },
+    "equipped_rod": "Old Rod",
+    "original_username": "13 i 6 \u26a1 13 o 12 i 5",
+    "equipped_bait": "Worm",
+    "balance": 588.6889767663622
+  },
+  "squenis": {
+    "total_casts": 8,
+    "total_fish_caught": 5,
+    "rarities": {
+      "Common": 4,
+      "Uncommon": 0,
+      "Rare": 1,
+      "Very Rare": 0,
+      "Epic": 0,
+      "Legendary": 0
+    },
+    "equipped_rod": "Old Rod",
+    "original_username": "Squenis",
+    "equipped_bait": "Worm",
+    "balance": 0.0
+  },
+  "motel 6 overdose": {
+    "total_casts": 20,
+    "total_fish_caught": 10,
+    "rarities": {
+      "Common": 5,
+      "Uncommon": 3,
+      "Rare": 2,
+      "Very Rare": 0,
+      "Epic": 0,
+      "Legendary": 0
+    },
+    "equipped_rod": "Old Rod",
+    "original_username": "Motel 6 Overdose",
+    "equipped_bait": "Worm",
+    "balance": 2135.340928157265
+  },
+  "j00zearse": {
+    "total_casts": 7,
+    "total_fish_caught": 4,
+    "rarities": {
+      "Common": 2,
+      "Uncommon": 1,
+      "Rare": 1,
+      "Very Rare": 0,
+      "Epic": 0,
+      "Legendary": 0
+    },
+    "equipped_rod": "Old Rod",
+    "original_username": "J00zearse",
+    "equipped_bait": "Worm",
+    "balance": 45.84828850887075
+  },
+  "\u2229 ( \u0361\u2686 \u035c\u0296 \u0361\u2686) \u2229": {
+    "total_casts": 3,
+    "total_fish_caught": 1,
+    "rarities": {
+      "Common": 1,
+      "Uncommon": 0,
+      "Rare": 0,
+      "Very Rare": 0,
+      "Epic": 0,
+      "Legendary": 0
+    },
+    "equipped_rod": "Old Rod",
+    "original_username": "\u2229 ( \u0361\u2686 \u035c\u0296 \u0361\u2686) \u2229",
+    "equipped_bait": "Worm",
+    "balance": 1.6821045723738193
+  },
+  "stevo_x": {
+    "total_casts": 9,
+    "total_fish_caught": 7,
+    "rarities": {
+      "Common": 2,
+      "Uncommon": 4,
+      "Rare": 1,
+      "Very Rare": 0,
+      "Epic": 0,
+      "Legendary": 0
+    },
+    "equipped_rod": "Old Rod",
+    "original_username": "Stevo_X",
+    "equipped_bait": "Worm",
+    "balance": 7.965589557344287
+  },
+  "mugetsu": {
+    "total_casts": 14,
+    "total_fish_caught": 9,
+    "rarities": {
+      "Common": 1,
+      "Uncommon": 4,
+      "Rare": 3,
+      "Very Rare": 1,
+      "Epic": 0,
+      "Legendary": 0
+    },
+    "equipped_rod": "Old Rod",
+    "original_username": "MUGETSU",
+    "equipped_bait": "Worm",
+    "balance": 15421.669807607297
+  },
+  "day drinkin to forget": {
+    "total_casts": 53,
+    "total_fish_caught": 37,
+    "rarities": {
+      "Common": 12,
+      "Uncommon": 12,
+      "Rare": 9,
+      "Very Rare": 3,
+      "Epic": 0,
+      "Legendary": 1
+    },
+    "equipped_rod": "Old Rod",
+    "original_username": "day drinkin to forget",
+    "equipped_bait": "Worm",
+    "balance": 232735.96653847428
+  },
+  "\ud835\ude1a\ud835\ude17\ud835\ude10\ud835\ude15": {
+    "total_casts": 2,
+    "total_fish_caught": 0,
+    "rarities": {
+      "Common": 0,
+      "Uncommon": 0,
+      "Rare": 0,
+      "Very Rare": 0,
+      "Epic": 0,
+      "Legendary": 0
+    },
+    "equipped_rod": "Old Rod",
+    "original_username": "\ud835\ude1a\ud835\ude17\ud835\ude10\ud835\ude15",
+    "equipped_bait": "Worm",
+    "balance": 0.0
+  },
+  "prestonv4": {
+    "total_casts": 1,
+    "total_fish_caught": 1,
+    "rarities": {
+      "Common": 0,
+      "Uncommon": 0,
+      "Rare": 1,
+      "Very Rare": 0,
+      "Epic": 0,
+      "Legendary": 0
+    },
+    "equipped_rod": "Old Rod",
+    "original_username": "Prestonv4",
+    "equipped_bait": "Worm",
+    "balance": 932.0891097354669
+  },
+  "peach": {
+    "total_casts": 3,
+    "total_fish_caught": 2,
+    "rarities": {
+      "Common": 0,
+      "Uncommon": 0,
+      "Rare": 2,
+      "Very Rare": 0,
+      "Epic": 0,
+      "Legendary": 0
+    },
+    "equipped_rod": "Old Rod",
+    "original_username": "peach",
+    "equipped_bait": "Worm",
+    "balance": 55.279678835573904
+  },
+  "keys": {
+    "total_casts": 18,
+    "total_fish_caught": 13,
+    "rarities": {
+      "Common": 3,
+      "Uncommon": 5,
+      "Rare": 3,
+      "Very Rare": 1,
+      "Epic": 0,
+      "Legendary": 1
+    },
+    "equipped_rod": "Old Rod",
+    "original_username": "keys",
+    "equipped_bait": "Worm",
+    "balance": 14.402580402634939
+  },
+  "devilsivy": {
+    "total_casts": 39,
+    "total_fish_caught": 26,
+    "rarities": {
+      "Common": 10,
+      "Uncommon": 6,
+      "Rare": 7,
+      "Very Rare": 3,
+      "Epic": 0,
+      "Legendary": 0
+    },
+    "equipped_rod": "Old Rod",
+    "original_username": "devilsivy",
+    "equipped_bait": "Worm",
+    "balance": 0.0
+  },
+  "nitrat3": {
+    "total_casts": 46,
+    "total_fish_caught": 32,
+    "rarities": {
+      "Common": 14,
+      "Uncommon": 6,
+      "Rare": 8,
+      "Very Rare": 3,
+      "Epic": 0,
+      "Legendary": 1
+    },
+    "equipped_rod": "Old Rod",
+    "original_username": "nitrat3",
+    "equipped_bait": "Worm",
+    "balance": 1077968.0030202372
+  },
+  "alexsntsv": {
+    "total_casts": 45,
+    "total_fish_caught": 29,
+    "rarities": {
+      "Common": 9,
+      "Uncommon": 7,
+      "Rare": 6,
+      "Very Rare": 5,
+      "Epic": 1,
+      "Legendary": 1
+    },
+    "equipped_rod": "Old Rod",
+    "original_username": "alexsntsv",
+    "equipped_bait": "Worm",
+    "balance": 11.057258274123939
+  },
+  "wt": {
+    "total_casts": 1,
+    "total_fish_caught": 0,
+    "rarities": {
+      "Common": 0,
+      "Uncommon": 0,
+      "Rare": 0,
+      "Very Rare": 0,
+      "Epic": 0,
+      "Legendary": 0
+    },
+    "equipped_rod": "Old Rod",
+    "original_username": "wt",
+    "equipped_bait": "Worm",
+    "balance": 0.0
+  },
+  "party girl": {
+    "total_casts": 17,
+    "total_fish_caught": 13,
+    "rarities": {
+      "Common": 7,
+      "Uncommon": 2,
+      "Rare": 3,
+      "Very Rare": 1,
+      "Epic": 0,
+      "Legendary": 0
+    },
+    "equipped_rod": "Old Rod",
+    "original_username": "party girl",
+    "equipped_bait": "Worm",
+    "balance": 130.05257241240747
+  },
+  "juriko": {
+    "total_casts": 6,
+    "total_fish_caught": 5,
+    "rarities": {
+      "Common": 1,
+      "Uncommon": 3,
+      "Rare": 0,
+      "Very Rare": 0,
+      "Epic": 0,
+      "Legendary": 1
+    },
+    "equipped_rod": "Old Rod",
+    "original_username": "Juriko",
+    "equipped_bait": "Worm",
+    "balance": 48.607705329559124
+  },
+  "uspenguin": {
+    "total_casts": 1,
+    "total_fish_caught": 1,
+    "rarities": {
+      "Common": 0,
+      "Uncommon": 0,
+      "Rare": 0,
+      "Very Rare": 1,
+      "Epic": 0,
+      "Legendary": 0
+    },
+    "equipped_rod": "Old Rod",
+    "original_username": "uspenguin",
+    "equipped_bait": "Worm",
+    "balance": 121.0480302894648
+  },
+  "jordan": {
+    "total_casts": 5,
+    "total_fish_caught": 1,
+    "rarities": {
+      "Common": 1,
+      "Uncommon": 0,
+      "Rare": 0,
+      "Very Rare": 0,
+      "Epic": 0,
+      "Legendary": 0
+    },
+    "equipped_rod": "Old Rod",
+    "original_username": "Jordan",
+    "equipped_bait": "Worm",
+    "balance": 46677304974.11388
+  },
+  "ii_banana_i": {
+    "total_casts": 2,
+    "total_fish_caught": 0,
+    "rarities": {
+      "Common": 0,
+      "Uncommon": 0,
+      "Rare": 0,
+      "Very Rare": 0,
+      "Epic": 0,
+      "Legendary": 0
+    },
+    "equipped_rod": "Old Rod",
+    "original_username": "II_Banana_I",
+    "equipped_bait": "Worm",
+    "balance": 0.0
+  },
+  "a beverage of sorts": {
+    "total_casts": 37,
+    "total_fish_caught": 26,
+    "rarities": {
+      "Common": 8,
+      "Uncommon": 8,
+      "Rare": 3,
+      "Very Rare": 5,
+      "Epic": 2,
+      "Legendary": 0
+    },
+    "equipped_rod": "Good Rod",
+    "original_username": "a beverage of sorts",
+    "equipped_bait": "Worm",
+    "balance": 5.0606784316680535
+  },
+  "ben cantakerous": {
+    "total_casts": 26,
+    "total_fish_caught": 4,
+    "rarities": {
+      "Common": 2,
+      "Uncommon": 2,
+      "Rare": 0,
+      "Very Rare": 0,
+      "Epic": 0,
+      "Legendary": 0
+    },
+    "equipped_rod": "Old Rod",
+    "original_username": "ben cantakerous",
+    "equipped_bait": "Worm",
+    "balance": 94.28111961431634
+  },
+  "ineedgasmoney01": {
+    "total_casts": 1,
+    "total_fish_caught": 0,
+    "rarities": {
+      "Common": 0,
+      "Uncommon": 0,
+      "Rare": 0,
+      "Very Rare": 0,
+      "Epic": 0,
+      "Legendary": 0
+    },
+    "equipped_rod": "Old Rod",
+    "original_username": "ineedgasmoney01",
+    "equipped_bait": "Worm",
+    "balance": 0.0
+  },
+  "unlucky": {
+    "total_casts": 6,
+    "total_fish_caught": 0,
+    "rarities": {
+      "Common": 0,
+      "Uncommon": 0,
+      "Rare": 0,
+      "Very Rare": 0,
+      "Epic": 0,
+      "Legendary": 0
+    },
+    "equipped_rod": "Good Rod",
+    "original_username": "unlucky",
+    "equipped_bait": "Worm",
+    "balance": 0.0
+  },
+  "doug dimmadome": {
+    "total_casts": 226,
+    "total_fish_caught": 182,
+    "rarities": {
+      "Common": 71,
+      "Uncommon": 58,
+      "Rare": 32,
+      "Very Rare": 15,
+      "Epic": 1,
+      "Legendary": 5
+    },
+    "equipped_rod": "Super Rod",
+    "original_username": "Doug Dimmadome",
+    "equipped_bait": "Crab",
+    "balance": 190471.65414299368
+  },
+  "\u2622\u26a2 orange \u26a2\u2622": {
+    "total_casts": 108,
+    "total_fish_caught": 42,
+    "rarities": {
+      "Common": 14,
+      "Uncommon": 15,
+      "Rare": 8,
+      "Very Rare": 5,
+      "Epic": 0,
+      "Legendary": 0
+    },
+    "equipped_rod": "Good Rod",
+    "original_username": "\u2622\u26a2 Orange \u26a2\u2622",
+    "equipped_bait": "Worm",
+    "balance": 105.49342077934638
+  },
+  "malcolm johnson": {
+    "total_casts": 120,
+    "total_fish_caught": 52,
+    "rarities": {
+      "Common": 18,
+      "Uncommon": 18,
+      "Rare": 10,
+      "Very Rare": 3,
+      "Epic": 2,
+      "Legendary": 1
+    },
+    "equipped_rod": "Super Rod",
+    "original_username": "Malcolm Johnson",
+    "equipped_bait": "Worm",
+    "balance": 549625.7342765216
+  },
+  "puppy slutz": {
+    "total_casts": 59,
+    "total_fish_caught": 16,
+    "rarities": {
+      "Common": 7,
+      "Uncommon": 6,
+      "Rare": 3,
+      "Very Rare": 0,
+      "Epic": 0,
+      "Legendary": 0
+    },
+    "equipped_rod": "Old Rod",
+    "original_username": "PUPPY SLUTZ",
+    "equipped_bait": "Worm",
+    "balance": 41718.62800969169
+  },
+  "yo gurt": {
+    "total_casts": 7,
+    "total_fish_caught": 3,
+    "rarities": {
+      "Common": 1,
+      "Uncommon": 1,
+      "Rare": 1,
+      "Very Rare": 0,
+      "Epic": 0,
+      "Legendary": 0
+    },
+    "equipped_rod": "Old Rod",
+    "original_username": "yo gurt",
+    "equipped_bait": "Worm",
+    "balance": 340.4929234696119
+  },
+  "dr. lisa cuddy": {
+    "total_casts": 2,
+    "total_fish_caught": 0,
+    "rarities": {
+      "Common": 0,
+      "Uncommon": 0,
+      "Rare": 0,
+      "Very Rare": 0,
+      "Epic": 0,
+      "Legendary": 0
+    },
+    "equipped_rod": "Old Rod",
+    "original_username": "Dr. Lisa Cuddy",
+    "equipped_bait": "Worm",
+    "balance": 0.0
+  },
+  "lawnmowa": {
+    "total_casts": 1,
+    "total_fish_caught": 0,
+    "rarities": {
+      "Common": 0,
+      "Uncommon": 0,
+      "Rare": 0,
+      "Very Rare": 0,
+      "Epic": 0,
+      "Legendary": 0
+    },
+    "equipped_rod": "Old Rod",
+    "original_username": "LawnmowA",
+    "equipped_bait": "Worm",
+    "balance": 0.0
+  },
+  "dr. eric foreman": {
+    "total_casts": 1,
+    "total_fish_caught": 0,
+    "rarities": {
+      "Common": 0,
+      "Uncommon": 0,
+      "Rare": 0,
+      "Very Rare": 0,
+      "Epic": 0,
+      "Legendary": 0
+    },
+    "equipped_rod": "Old Rod",
+    "original_username": "Dr. Eric Foreman",
+    "equipped_bait": "Worm",
+    "balance": 0.0
+  },
+  "mom": {
+    "total_casts": 67,
+    "total_fish_caught": 41,
+    "rarities": {
+      "Common": 16,
+      "Uncommon": 14,
+      "Rare": 8,
+      "Very Rare": 3,
+      "Epic": 0,
+      "Legendary": 0
+    },
+    "equipped_rod": "Super Rod",
+    "original_username": "mom",
+    "equipped_bait": "Worm",
+    "balance": 2428.780251258999
+  },
+  "jimmy \u267f": {
+    "total_casts": 57,
+    "total_fish_caught": 39,
+    "rarities": {
+      "Common": 15,
+      "Uncommon": 14,
+      "Rare": 6,
+      "Very Rare": 2,
+      "Epic": 1,
+      "Legendary": 1
+    },
+    "equipped_rod": "Super Rod",
+    "original_username": "Jimmy \u267f",
+    "equipped_bait": "Worm",
+    "balance": 167765109643.79324
+  },
+  "chairman mao": {
+    "total_casts": 5,
+    "total_fish_caught": 2,
+    "rarities": {
+      "Common": 0,
+      "Uncommon": 1,
+      "Rare": 0,
+      "Very Rare": 1,
+      "Epic": 0,
+      "Legendary": 0
+    },
+    "equipped_rod": "Old Rod",
+    "original_username": "chairman mao",
+    "equipped_bait": "Worm",
+    "balance": 136.3053043068633
+  },
+  "millibras": {
+    "total_casts": 7,
+    "total_fish_caught": 3,
+    "rarities": {
+      "Common": 0,
+      "Uncommon": 2,
+      "Rare": 1,
+      "Very Rare": 0,
+      "Epic": 0,
+      "Legendary": 0
+    },
+    "equipped_rod": "Old Rod",
+    "original_username": "MilLibras",
+    "equipped_bait": "Worm",
+    "balance": 293.2739921352736
+  },
+  "asianbrown": {
+    "total_casts": 77,
+    "total_fish_caught": 23,
+    "rarities": {
+      "Common": 10,
+      "Uncommon": 6,
+      "Rare": 7,
+      "Very Rare": 0,
+      "Epic": 0,
+      "Legendary": 0
+    },
+    "equipped_rod": "Good Rod",
+    "original_username": "AsianBrown",
+    "equipped_bait": "Worm",
+    "balance": 244.266465980411
+  },
+  "lumiboobear": {
+    "total_casts": 96,
+    "total_fish_caught": 53,
+    "rarities": {
+      "Common": 22,
+      "Uncommon": 9,
+      "Rare": 16,
+      "Very Rare": 5,
+      "Epic": 1,
+      "Legendary": 0
+    },
+    "equipped_rod": "Good Rod",
+    "original_username": "LumiBooBear",
+    "equipped_bait": "Worm",
+    "balance": 107.76858030063349
+  },
+  "a random lumpia": {
+    "total_casts": 1,
+    "total_fish_caught": 1,
+    "rarities": {
+      "Common": 1,
+      "Uncommon": 0,
+      "Rare": 0,
+      "Very Rare": 0,
+      "Epic": 0,
+      "Legendary": 0
+    },
+    "equipped_rod": "Old Rod",
+    "original_username": "A Random Lumpia",
+    "equipped_bait": "Worm",
+    "balance": 5.141254336781617
+  },
+  "bighuda": {
+    "total_casts": 36,
+    "total_fish_caught": 11,
+    "rarities": {
+      "Common": 4,
+      "Uncommon": 3,
+      "Rare": 2,
+      "Very Rare": 2,
+      "Epic": 0,
+      "Legendary": 0
+    },
+    "equipped_rod": "Old Rod",
+    "equipped_bait": "Worm",
+    "original_username": "BigHuda",
+    "balance": 0.0
+  },
+  "gentry": {
+    "total_casts": 15,
+    "total_fish_caught": 2,
+    "rarities": {
+      "Common": 1,
+      "Uncommon": 0,
+      "Rare": 0,
+      "Very Rare": 1,
+      "Epic": 0,
+      "Legendary": 0
+    },
+    "equipped_rod": "Old Rod",
+    "equipped_bait": "Worm",
+    "original_username": "gentry",
+    "balance": 8155.867978532353
+  },
+  "noka": {
+    "total_casts": 35,
+    "total_fish_caught": 18,
+    "rarities": {
+      "Common": 11,
+      "Uncommon": 4,
+      "Rare": 1,
+      "Very Rare": 1,
+      "Epic": 1,
+      "Legendary": 0
+    },
+    "equipped_rod": "Old Rod",
+    "equipped_bait": "Worm",
+    "original_username": "noka",
+    "balance": 0.0
+  },
+  "\u3037": {
+    "total_casts": 81,
+    "total_fish_caught": 72,
+    "rarities": {
+      "Common": 27,
+      "Uncommon": 25,
+      "Rare": 14,
+      "Very Rare": 3,
+      "Epic": 2,
+      "Legendary": 1
+    },
+    "equipped_rod": "Super Rod",
+    "equipped_bait": "Crab",
+    "original_username": "\u3037",
+    "balance": 2464000.0
+  },
+  "byu112": {
+    "total_casts": 85,
+    "total_fish_caught": 41,
+    "rarities": {
+      "Common": 20,
+      "Uncommon": 14,
+      "Rare": 2,
+      "Very Rare": 3,
+      "Epic": 1,
+      "Legendary": 1
+    },
+    "equipped_rod": "Good Rod",
+    "equipped_bait": "Worm",
+    "original_username": "Byu112",
+    "balance": 0.0
+  },
+  "nadeinhead": {
+    "total_casts": 11,
+    "total_fish_caught": 2,
+    "rarities": {
+      "Common": 1,
+      "Uncommon": 0,
+      "Rare": 1,
+      "Very Rare": 0,
+      "Epic": 0,
+      "Legendary": 0
+    },
+    "equipped_rod": "Average Rod",
+    "equipped_bait": "Worm",
+    "original_username": "Nadeinhead",
+    "balance": 448.2319266304617
+  },
+  "drp76933": {
+    "total_casts": 8,
+    "total_fish_caught": 1,
+    "rarities": {
+      "Common": 0,
+      "Uncommon": 1,
+      "Rare": 0,
+      "Very Rare": 0,
+      "Epic": 0,
+      "Legendary": 0
+    },
+    "equipped_rod": "Old Rod",
+    "equipped_bait": "Worm",
+    "original_username": "drp76933",
+    "balance": 178.9449389122644
+  },
+  "defective aim key": {
+    "total_casts": 14,
+    "total_fish_caught": 1,
+    "rarities": {
+      "Common": 1,
+      "Uncommon": 0,
+      "Rare": 0,
+      "Very Rare": 0,
+      "Epic": 0,
+      "Legendary": 0
+    },
+    "equipped_rod": "Old Rod",
+    "equipped_bait": "Worm",
+    "original_username": "defective aim key",
+    "balance": 275.00143513973956
+  },
+  "sauna piss rock huffer": {
+    "total_casts": 1,
+    "total_fish_caught": 1,
+    "rarities": {
+      "Common": 1,
+      "Uncommon": 0,
+      "Rare": 0,
+      "Very Rare": 0,
+      "Epic": 0,
+      "Legendary": 0
+    },
+    "equipped_rod": "Old Rod",
+    "equipped_bait": "Worm",
+    "original_username": "Sauna Piss Rock Huffer",
+    "balance": 0.0
+  },
+  "stwabery": {
+    "total_casts": 79,
+    "total_fish_caught": 58,
+    "rarities": {
+      "Common": 23,
+      "Uncommon": 14,
+      "Rare": 11,
+      "Very Rare": 6,
+      "Epic": 3,
+      "Legendary": 1
+    },
+    "equipped_rod": "Super Rod",
+    "equipped_bait": "Crab",
+    "original_username": "stwabery",
+    "balance": 464.7635747522023
+  }
+}
