@@ -41,7 +41,7 @@ jobs:
           pyinstaller CS2GoFish.spec
       - name: Create zip file
         run: |
-          python -m zipfile -c cs2gofish.zip dist/CS2GoFish.exe .env fishbase.json player_stats.json global_stats.json exec.txt console.log fish.log
+          python -m zipfile -c cs2gofish.zip dist/CS2GoFish.exe .env fishbase.json
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
