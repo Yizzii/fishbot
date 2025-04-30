@@ -28,8 +28,8 @@ def setup_logging():
 load_dotenv(os.path.join(BASE_PATH, '.env'))
 
 # Default paths if not set in .env
-EXEC_FILE = os.getenv('EXEC_FILE', os.path.join(BASE_PATH, 'exec.txt'))
-CONSOLE_FILE = os.getenv('CONSOLE_FILE', os.path.join(BASE_PATH, 'console.log'))
+EXEC_FILE = os.getenv('EXEC_FILE')
+CONSOLE_FILE = os.getenv('CONSOLE_FILE')
 if not EXEC_FILE or not CONSOLE_FILE:
     logging.warning("EXEC_FILE or CONSOLE_FILE not set in .env, using defaults")
 

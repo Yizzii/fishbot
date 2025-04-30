@@ -5,15 +5,16 @@ import sys
 from dotenv import load_dotenv
 from modules.fish import cast_line, show_player_stats, show_global_stats_command, shop
 from modules.economy import gamble, give_money
-from modules.utils import write_command, press_key, press_key_no_delay, get_balance, setup_logging, BASE_PATH, commands
+from modules.utils import write_command, press_key, press_key_no_delay, get_balance, setup_logging, commands, BASE_PATH, CONSOLE_FILE
 import logging
+import tkinter as tk
+from tkinter import messagebox
 
 # Setup logging
 setup_logging()
 
 load_dotenv(os.path.join(BASE_PATH, '.env'))
 
-CONSOLE_FILE = os.getenv('CONSOLE_FILE', os.path.join(BASE_PATH, 'console.log'))
 PRIVILEGED_USERNAME = os.getenv('PRIVILEGED_USERNAME')
 if not PRIVILEGED_USERNAME:
     logging.error("PRIVILEGED_USERNAME not set in .env. No user will have privileged access.")
@@ -131,6 +132,13 @@ def parse(line):
             commands(username)
 
 if __name__ == '__main__':
+    # Check if console.log exists
+    if not os.path.exists(CONSOLE_FILE):
+        root = tk.Tk()
+        root.withdraw()  # Hide the main window
+        messagebox.showerror("Error", f"Console log file not found: {CONSOLE_FILE}\nPlease ensure the file location is correct.")
+        root.destroy()
+        sys.exit(1)
     log_file = open(CONSOLE_FILE, "r", encoding="utf-8")
     try:
         while True:

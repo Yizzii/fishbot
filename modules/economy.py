@@ -102,16 +102,3 @@ def give_money(username, args):
         write_command(f"say [GIVEMONEY] > {display_username}: Error processing transfer. Please try again.")
         press_key()
         logging.error(f"Error in give_money for {username}: {e}")
-
-def commands(username):
-    """Display a list of available commands and their descriptions."""
-    username_lower = username.lower()
-    display_username = get_display_username(username)
-    logging.debug(f"Commands requested by {username}")
-    command_list = [
-        "!gamble",
-        "!givemoney"
-    ]
-    write_command(f"say [COMMANDS] > Available economy commands: {', '.join(command_list)}")
-    press_key()
-    logging.debug(f"Displayed commands for {username}")
