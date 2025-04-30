@@ -30,6 +30,7 @@ Galls is a somewhat simple python script to generate responses to commands by se
   - git lone the repo or manually install source into a folder on your computer.
   - cd into repo folder. `cd <path>` in command line
   - run `pip install -r requirements.txt`
+  - edit the .env file with your username and config paths
   - Run `python main.py` inside of the project directory.
   - Run `bind f1 yizzibotmessage` in cs2 console
 
