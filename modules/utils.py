@@ -20,12 +20,6 @@ BASE_PATH = get_base_path()
 # Configure logging
 def setup_logging():
     log_file = os.path.join(BASE_PATH, 'fish.log')
-    if not os.path.exists(log_file):
-        root = tk.Tk()
-        root.withdraw()
-        messagebox.showerror("Error", f"Log file not found: {log_file}\nPlease ensure the file exists in the same directory as the executable.")
-        root.destroy()
-        sys.exit(1)
     logging.basicConfig(
         filename=log_file,
         level=logging.DEBUG,
