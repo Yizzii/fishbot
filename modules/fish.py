@@ -380,10 +380,10 @@ def choose_rarity(roll, categories, modifier):
 
 def rarity_chance(rarity):
     return {
-        "Common": 0.40,
+        "Common": 0.41,
         "Uncommon": 0.30,
         "Rare": 0.15,
-        "Very Rare": 0.08,
-        "Epic": 0.05,
-        "Legendary": 0.02,
+        "Very Rare": 0.1,
+        "Epic": 0.03,
+        "Legendary": 0.01,
     }.get(rarity, 0.0)
