@@ -20,6 +20,17 @@ BASE_PATH = get_base_path()
 # Configure logging
 def setup_logging():
     log_file = os.path.join(BASE_PATH, 'fish.log')
+    if not os.path.exists(log_file):
+        try:
+            with open(log_file, 'w') as f:
+                f.write('')
+            logging.debug(f"Created fish.log at {log_file}")
+        except IOError as e:
+            root = tk.Tk()
+            root.withdraw()
+            messagebox.showerror("Error", f"Failed to create log file: {log_file}\n{str(e)}")
+            root.destroy()
+            sys.exit(1)
     logging.basicConfig(
         filename=log_file,
         level=logging.DEBUG,
@@ -87,15 +98,28 @@ def get_balance(username):
 def update_balance(username, amount):
     """Update a user's balance in player_stats.json and return the new balance."""
     username_lower = username.lower()
-    current_balance = get_balance(username)
+    current_balance = get_balance(username_lower)
     new_balance = current_balance + float(amount)  # Ensure amount is float
     logging.debug(f"Updating balance for {username_lower}: {current_balance} + {amount} = {new_balance}")
     save_balances(username_lower, new_balance)
     return new_balance
 
 def load_player_stats():
-    """Load player stats from player_stats.json, return a dict with lowercase keys."""
+    """Load player stats from player_stats.json, create file if it doesn't exist."""
     logging.debug(f"Attempting to load player_stats from: {PLAYER_STATS_FILE}")
+    if not os.path.exists(PLAYER_STATS_FILE):
+        logging.info(f"player_stats.json not found, creating at {PLAYER_STATS_FILE}")
+        try:
+            with open(PLAYER_STATS_FILE, 'w') as file:
+                json.dump({}, file)
+            logging.debug(f"Created empty player_stats.json")
+        except IOError as e:
+            logging.error(f"Failed to create player_stats.json: {str(e)}")
+            root = tk.Tk()
+            root.withdraw()
+            messagebox.showerror("Error", f"Failed to create player stats file: {PLAYER_STATS_FILE}\n{str(e)}")
+            root.destroy()
+            sys.exit(1)
     try:
         with open(PLAYER_STATS_FILE, "r") as file:
             stats = json.load(file)
@@ -134,9 +158,10 @@ def load_player_stats():
             logging.debug(f"Loaded player stats: {new_stats}")
             return new_stats
     except (json.JSONDecodeError, IOError) as e:
+        logging.error(f"Error reading player stats file: {PLAYER_STATS_FILE}\n{str(e)}")
         root = tk.Tk()
         root.withdraw()
-        messagebox.showerror("Error", f"Error reading player stats file: {PLAYER_STATS_FILE}\n{e}")
+        messagebox.showerror("Error", f"Error reading player stats file: {PLAYER_STATS_FILE}\n{str(e)}")
         root.destroy()
         sys.exit(1)
 
@@ -153,14 +178,101 @@ def save_player_stats(stats):
                 messagebox.showerror("Error", f"Player stats file is not writable: {PLAYER_STATS_FILE}\nCheck file permissions.")
                 root.destroy()
                 sys.exit(1)
+        # Verify stats are JSON-serializable
+        json.dumps(stats)  # Raises TypeError if non-serializable
         with open(PLAYER_STATS_FILE, "w") as file:
             json.dump(stats, file, indent=2)
-        logging.debug(f"Successfully saved player stats: {stats}")
-    except Exception as e:
+        logging.debug(f"Successfully saved player stats to {PLAYER_STATS_FILE}: {stats}")
+    except (TypeError, json.JSONDecodeError, IOError) as e:
         logging.error(f"Failed to save player stats to {PLAYER_STATS_FILE}: {str(e)}")
         root = tk.Tk()
         root.withdraw()
         messagebox.showerror("Error", f"Error writing to player stats file: {PLAYER_STATS_FILE}\n{str(e)}")
+        root.destroy()
+        sys.exit(1)
+
+def load_global_stats():
+    """Load global stats from global_stats.json, create file if it doesn't exist."""
+    logging.debug(f"Attempting to load global_stats from: {GLOBAL_STATS_FILE}")
+    if not os.path.exists(GLOBAL_STATS_FILE):
+        logging.info(f"global_stats.json not found, creating at {GLOBAL_STATS_FILE}")
+        try:
+            default_global_stats = {
+                "total_casts": 0,
+                "total_fish_caught": 0,
+                "rarities": {
+                    "Common": 0,
+                    "Uncommon": 0,
+                    "Rare": 0,
+                    "Very Rare": 0,
+                    "Epic": 0,
+                    "Legendary": 0
+                }
+            }
+            with open(GLOBAL_STATS_FILE, 'w') as file:
+                json.dump(default_global_stats, file, indent=2)
+            logging.debug(f"Created global_stats.json with defaults")
+            return default_global_stats
+        except IOError as e:
+            logging.error(f"Failed to create global_stats.json: {str(e)}")
+            root = tk.Tk()
+            root.withdraw()
+            messagebox.showerror("Error", f"Failed to create global stats file: {GLOBAL_STATS_FILE}\n{str(e)}")
+            root.destroy()
+            sys.exit(1)
+    try:
+        with open(GLOBAL_STATS_FILE, "r") as file:
+            stats = json.load(file)
+            default_global_stats = {
+                "total_casts": 0,
+                "total_fish_caught": 0,
+                "rarities": {
+                    "Common": 0,
+                    "Uncommon": 0,
+                    "Rare": 0,
+                    "Very Rare": 0,
+                    "Epic": 0,
+                    "Legendary": 0
+                }
+            }
+            # Ensure all required keys exist
+            for key in default_global_stats:
+                if key not in stats:
+                    stats[key] = default_global_stats[key]
+            for rarity in default_global_stats["rarities"]:
+                if rarity not in stats["rarities"]:
+                    stats["rarities"][rarity] = 0
+            logging.debug(f"Loaded global stats: {stats}")
+            return stats
+    except (json.JSONDecodeError, IOError) as e:
+        logging.error(f"Error reading global stats file: {GLOBAL_STATS_FILE}\n{str(e)}")
+        root = tk.Tk()
+        root.withdraw()
+        messagebox.showerror("Error", f"Error reading global stats file: {GLOBAL_STATS_FILE}\n{str(e)}")
+        root.destroy()
+        sys.exit(1)
+
+def save_global_stats(stats):
+    """Save global stats to global_stats.json."""
+    logging.debug(f"Attempting to save global_stats to: {GLOBAL_STATS_FILE}")
+    try:
+        if os.path.exists(GLOBAL_STATS_FILE):
+            if not os.access(GLOBAL_STATS_FILE, os.W_OK):
+                logging.error(f"Global stats file is not writable: {GLOBAL_STATS_FILE}")
+                root = tk.Tk()
+                root.withdraw()
+                messagebox.showerror("Error", f"Global stats file is not writable: {GLOBAL_STATS_FILE}\nCheck file permissions.")
+                root.destroy()
+                sys.exit(1)
+        json.dumps(stats)  # Verify serializable
+        with open(GLOBAL_STATS_FILE, "w") as file:
+            json.dump(stats, file, indent=2)
+        logging.debug(f"Successfully saved global stats to {GLOBAL_STATS_FILE}: {stats}")
+    except (TypeError, json.JSONDecodeError, IOError) as e:
+        logging.error(f"Failed to save global stats to {GLOBAL_STATS_FILE}: {str(e)}")
+        root = tk.Tk()
+        root.withdraw()
+        messagebox.showerror("Error", f"Error writing to global stats file: {GLOBAL_STATS_FILE}\n{str(e)}")
         root.destroy()
         sys.exit(1)
 
