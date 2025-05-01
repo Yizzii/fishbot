@@ -96,12 +96,6 @@ def update_balance(username, amount):
 def load_player_stats():
     """Load player stats from player_stats.json, return a dict with lowercase keys."""
     logging.debug(f"Attempting to load player_stats from: {PLAYER_STATS_FILE}")
-    if not os.path.exists(PLAYER_STATS_FILE):
-        root = tk.Tk()
-        root.withdraw()
-        messagebox.showerror("Error", f"Player stats file not found: {PLAYER_STATS_FILE}\nPlease ensure the file exists in the same directory as the executable.")
-        root.destroy()
-        sys.exit(1)
     try:
         with open(PLAYER_STATS_FILE, "r") as file:
             stats = json.load(file)
