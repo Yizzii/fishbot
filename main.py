@@ -5,7 +5,7 @@ import sys
 from dotenv import load_dotenv
 from modules.fish import cast_line, show_player_stats, show_global_stats_command, shop
 from modules.economy import gamble, give_money
-from modules.utils import write_command, press_key, press_key_no_delay, get_balance, setup_logging, commands, BASE_PATH, CONSOLE_FILE
+from modules.utils import write_command, press_key, commands, get_balance, setup_logging, BASE_PATH, CONSOLE_FILE
 import logging
 import tkinter as tk
 from tkinter import messagebox
@@ -105,19 +105,27 @@ def parse(line):
 
     is_allowed, wait_time = check_cooldown(username, command)
     if not is_allowed:
+        logging.info(f"Command {command} from {username} blocked by cooldown. Wait {wait_time:.2f} seconds")
         return
 
+    logging.info(f"Executing command: {command} from {username} with args: {args}")
     match command:
         case "!fish":
+            logging.debug(f"Calling cast_line for {username}")
             cast_line(username)
+            balance = get_balance(username.lower())
+            logging.info(f"Post-fish balance for {username.lower()}: {balance}")
         case "!gamble":
             if args:
+                logging.debug(f"Calling gamble for {username} with args: {args}")
                 gamble(username, args)
+                balance = get_balance(username.lower())
+                logging.info(f"Post-gamble balance for {username.lower()}: {balance}")
             else:
                 write_command(f"say [GAMBLE] >> {username}: Please specify an amount, 'all', or percentage like 50%, e.g., !gamble 10, !gamble all, !gamble 50%")
                 press_key()
         case "!balance":
-            balance = get_balance(username)
+            balance = get_balance(username.lower())
             write_command(f"say [BALANCE] >> {username}: Your current balance is ${round(balance, 2):,.2f}")
             press_key()
         case "!stats":
@@ -127,7 +135,10 @@ def parse(line):
         case "!shop":
             shop(username, args)
         case "!givemoney":
+            logging.debug(f"Calling give_money for {username} with args: {args}")
             give_money(username, args)
+            balance = get_balance(username.lower())
+            logging.info(f"Post-givemoney balance for {username.lower()}: {balance}")
         case "!commands":
             commands(username)
 
@@ -136,7 +147,7 @@ if __name__ == '__main__':
     if not os.path.exists(CONSOLE_FILE):
         root = tk.Tk()
         root.withdraw()  # Hide the main window
-        messagebox.showerror("Error", f"Console log file not found: {CONSOLE_FILE}\nPlease ensure the file location is correct.")
+        messagebox.showerror("Error", f"Console log file not found: {CONSOLE_FILE}\nPlease ensure the file exists in the same directory as the executable.")
         root.destroy()
         sys.exit(1)
     log_file = open(CONSOLE_FILE, "r", encoding="utf-8")

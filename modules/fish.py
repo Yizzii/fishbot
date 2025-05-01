@@ -146,9 +146,14 @@ def cast_line(username):
         if chosen_rarity:
             global_stats["rarities"][chosen_rarity] += 1
             player_stats[username_lower]["rarities"][chosen_rarity] += 1
-        update_balance(username, price)
-        write_command(f"say [GOFISH] > {display_username}: <>< You caught a ({chosen_rarity}) {fish_name}! It weighs {round(weight, 2)}lbs and is worth around ${round(price, 2):,.2f}. New balance: ${round(get_balance(username), 2):,.2f}")
+        logging.debug(f"Calling update_balance for {username_lower} with price: {price}")
+        update_balance(username_lower, price)
+        # Reload player_stats to merge balance update
+        player_stats = load_player_stats()
+        logging.debug(f"Reloaded player_stats after update_balance for {username_lower}: {player_stats.get(username_lower, {})}")
+        write_command(f"say [GOFISH] > {display_username}: <>< You caught a ({chosen_rarity}) {fish_name}! It weighs {round(weight, 2)}lbs and is worth around ${round(price, 2):,.2f}. New balance: ${round(get_balance(username_lower), 2):,.2f}")
         press_key()
+    logging.debug(f"Saving player_stats for {username_lower} before final save: {player_stats.get(username_lower, {})}")
     save_global_stats(global_stats)
     save_player_stats(player_stats)
 

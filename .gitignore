@@ -162,3 +162,5 @@ cython_debug/
 #.idea/
 
 modules/__pycache__/
+global_stats.json
+player_stats.json
