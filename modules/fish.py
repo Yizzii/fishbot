@@ -161,6 +161,26 @@ def shop(username, args=None):
     username_lower = username.lower()
     display_username = get_display_username(username)
     args_lower = args.lower() if args else ""
+    player_stats = load_player_stats()
+    
+    if username_lower not in player_stats:
+        player_stats[username_lower] = {
+            "balance": 0.0,
+            "total_casts": 0,
+            "total_fish_caught": 0,
+            "rarities": {
+                "Common": 0,
+                "Uncommon": 0,
+                "Rare": 0,
+                "Very Rare": 0,
+                "Epic": 0,
+                "Legendary": 0
+            },
+            "equipped_rod": "Old Rod",
+            "equipped_bait": "Worm",
+            "original_username": username
+        }
+
     if args_lower == "bait":
         bait_list = [
             f"{bait}: ${bait_stats['price']:,.2f} (Catch Rate Boost: +{bait_stats['catch_rate_boost']*100:.2f}%, Rarity Boost: {bait_stats['rarity_modifier']:.2f}x)"
@@ -183,8 +203,7 @@ def shop(username, args=None):
         return
     if args_lower.startswith("buy "):
         item_name = " ".join(args.split()[1:]).title()
-        player_stats = load_player_stats()
-        current_balance = get_balance(username)
+        current_balance = get_balance(username_lower)
         if item_name in FISHING_RODS:
             rod_stats = FISHING_RODS[item_name]
             price = rod_stats["price"]
@@ -196,10 +215,13 @@ def shop(username, args=None):
                 write_command(f"say [SHOP] > {display_username}: Not enough funds! Need ${price:,.2f}, you have ${current_balance:,.2f}")
                 press_key()
                 return
-            update_balance(username, -price)
+            logging.debug(f"Calling update_balance for {username_lower} to deduct rod price: {price}")
+            update_balance(username_lower, -price)
+            player_stats = load_player_stats()
             player_stats[username_lower]["equipped_rod"] = item_name
+            logging.debug(f"Reloaded player_stats after update_balance for {username_lower}: {player_stats.get(username_lower, {})}")
             save_player_stats(player_stats)
-            write_command(f"say [SHOP] > {display_username}: You bought {item_name} for ${price:,.2f}! It’s now equipped. New balance: ${round(get_balance(username), 2):,.2f}")
+            write_command(f"say [SHOP] > {display_username}: You bought {item_name} for ${price:,.2f}! It’s now equipped. New balance: ${round(get_balance(username_lower), 2):,.2f}")
             press_key()
             return
         if item_name in FISHING_BAITS:
@@ -212,10 +234,14 @@ def shop(username, args=None):
             if current_balance < price:
                 write_command(f"say [SHOP] > {display_username}: Not enough funds! Need ${price:,.2f}, you have ${current_balance:,.2f}")
                 press_key()
-            update_balance(username, -price)
+                return
+            logging.debug(f"Calling update_balance for {username_lower} to deduct bait price: {price}")
+            update_balance(username_lower, -price)
+            player_stats = load_player_stats()
             player_stats[username_lower]["equipped_bait"] = item_name
+            logging.debug(f"Reloaded player_stats after update_balance for {username_lower}: {player_stats.get(username_lower, {})}")
             save_player_stats(player_stats)
-            write_command(f"say [SHOP] > {display_username}: You bought {item_name} bait for ${price:,.2f}! It’s now equipped. New balance: ${round(get_balance(username), 2):,.2f}")
+            write_command(f"say [SHOP] > {display_username}: You bought {item_name} bait for ${price:,.2f}! It’s now equipped. New balance: ${round(get_balance(username_lower), 2):,.2f}")
             press_key()
             return
         write_command(f"say [SHOP] > {display_username}: Invalid item name. See baits with !shop bait, See rods with !shop")
