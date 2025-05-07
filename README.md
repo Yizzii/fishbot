@@ -23,7 +23,7 @@ Galls is a somewhat simple python script to generate responses to commands by se
  - extract zip to folder
  - edit the .env file with your username and config paths
  - open CS2GoFish.exe
- - Run `bind f1 yizzibotmessage` in cs2 console
+ - Run `bind f1 exec yizzibotmessage` in cs2 console
 
 ## Manual Install
   - install [Python](https://www.python.org/downloads/)
@@ -32,7 +32,7 @@ Galls is a somewhat simple python script to generate responses to commands by se
   - run `pip install -r requirements.txt`
   - edit the .env file with your username and config paths
   - Run `python main.py` inside of the project directory.
-  - Run `bind f1 yizzibotmessage` in cs2 console
+  - Run `bind f1 exec yizzibotmessage` in cs2 console
 
 ## Commands
     "!fish - Cast your line to catch a fish.",
